@@ -1,0 +1,26 @@
+/*homepage style*/
+.bigtitle {
+    margin: auto;
+    color: brown;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.headingtwo {
+    color: saddlebrown;
+}
+
+/*font segment*/
+.songheader {
+    font-size: 40px;
+}
+
+/*returning to homepage button*/
+.button{
+    text-align: center;
+    margin: 4px 2px;
+    background-color: black;
+}
