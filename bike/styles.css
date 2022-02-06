@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+/* IDs: human, body-bike, leg, foot, head, back-wheel, front-wheel*/
+
+#back-wheel, #front-wheel{
+    animation: wheel 3s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#human, #body-bike, #leg, #foot{
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#head{
+    animation: head 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes head {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(25deg);
+    }
+    
+}
+
+@keyframes bike{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
