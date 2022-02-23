@@ -1,0 +1,27 @@
+.para {
+    color: white;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.fit {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.smoll {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+.quote {
+    color: white;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 45px;
+}
