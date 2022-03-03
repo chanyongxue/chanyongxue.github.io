@@ -2,6 +2,8 @@
     color: white;
     text-align: center;
     font-family: 'Poiret One', cursive;
+    text-justify: inter-word;
+    line-height: 1.5em;
 }
 
 .center {
@@ -25,3 +27,8 @@
     font-family: 'Poiret One', cursive;
     font-size: 45px;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  

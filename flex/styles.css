@@ -1,0 +1,45 @@
+body {
+    background-color: #bea874;
+    font-family: 'Candal', sans-serif;
+    }
+  a { color: #79580d;}
+  a:hover {
+    color: #bea874;
+  }
+  img {
+    width: 100%;
+  }
+  .font-color {
+      color: #bea874;
+  }
+
+  .p-color {
+    color: #79580d;
+  }
+
+  .h-color{
+      color: white;
+  }
+  .parent-flex {
+    display: flex;
+    border: 40px solid rgb(255, 226, 189);
+    margin: 50px;
+    background: rgb(255, 226, 189);
+  }
+  .parent-flex div {
+    margin: 10px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  .flex-left {
+    flex: 10%;
+  }
+  .flex-center {
+    flex: 10%;
+    padding: 0 40px;
+  }
+  .flex-right {
+    flex: 20%;
+  }
