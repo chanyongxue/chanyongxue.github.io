@@ -1,35 +1,115 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
         <style>
-            body {
-                background-color: #364238; 
-            }
-        </style>
+            </style>
     </head>
-    </html>
-</body>
+   
 <div>
-    <img src="mccalls-logo-white.svg">
-    <p class="para">
-        McCall's was a monthly American women's magazine,
-        published by the McCall Corporation, that enjoyed
-        great popularity through much of the 20th century,
-        peaking at a readership of 8.4 million in the early 1960s.
-        It was established as a small-format magazine called
-        The Queen in 1873. In 1897 it was renamed McCall's Magazine
-        —The Queen of Fashion (later shortened to McCall's) and
-        subsequently grew in size to become a large-format glossy.
-        It was one of the "Seven Sisters" group of women's 
-        service magazines.
-    </p>
-</div>
-<div>
-    <h2>Rebranding of McCall's Magazine</h2>
-    <li class="para"><a href="feature.html">Features</a></li>
-    <li class="para"><a href="detail.html">Details</a></li>
-    <li class="para"><a href="change.html"></a>Changes in History</li>
-    <li class="para"><a href="sewing.html"></a>Sewing History</li>
-</div>
+    <button class="tablink" onclick="openPage('Home', this, 'rgb(53, 61, 138)')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('About', this, 'rgb(53, 61, 138)')">About</button>
+    <button class="tablink" onclick="openPage('Discontinued', this, 'rgb(53, 61, 138)')" >Discontinued</button>
+    <button class="tablink" onclick="openPage('Vision', this, 'rgb(53, 61, 138)')">Vision</button>
+    <button class="tablink" onclick="openPage('ReBrand', this, 'rgb(53, 61, 138)')">ReBrand</button>
+    
+    
+    <div id="Home" class="tabcontent">
+      <h3>Discover what McCall was and will be</h3>
+      <img src=old-logo-mccalls.png>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>What is McCall?</h3>
+        <p class="flexli">The company is named after the founder of its namesake magazine, James McCall, who was a Scottish tailor.
+          For 125 years, McCall&#x27s reflected the roiling changes in the lives of American women -- as well as the passing fads of the publishing business.
+          </p>
+          <img class="smoll" src="mccalls_birdnest_medium.jpg">
+      </div>
+
+    <div id="Discontinued" class="tabcontent">
+      <h3>Why did the magazine discontinue?</h3>
+      <p class="flexli">McCall&#x27s circulation was kept artificially high by cheap subscription prices that didn&#x27t pay for the cost of the magazine.
+        It wasn&#x27t selling well on the newsstand and advertisers weren&#x27t flocking to it.
+        Change in ownership in 2000 to entertainer Rosie O&#x27Donnell and the magazine was renamed to Rosie in 2001. The company ceased publication at the end of 2002 as O&#x27 Donnell stated that she didn&#x27t believe the magazine reflects her vision.</p>
+        <img class="smoll" src="oldarchive.jpg">
+    </div>
+    
+    
+    <div id="Vision" class="tabcontent">
+      <h3>New light to the magazine</h3>
+      <p class="flexli">O&#x27 Donnell stated, 
+“I wanted a magazine that celebrates real women, that understands that they care about more than waistlines or the latest makeup styles or fashions, that they want to be relevant and help each other and care about the world.”</p>
+    </div>
+
+    <div id="ReBrand" class="tabcontent">
+        <h3>New and Improved</h3>
+        <p>Drag image to reveal rebrand</p>
+        <img class="behind" src="Tabloid - 3.svg">
+        <div id="mydiv"><img src="archivemccall.jpg"> </div>
+  </div>
+<script>
+function openPage(pageName, elmnt, color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+
+    document.getElementById(pageName).style.display = "block";
+  
+    elmnt.style.backgroundColor = color;
+  }
+  
+  document.getElementById("defaultOpen").click();
+
+  dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+    </script>
+
 </html>

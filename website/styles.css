@@ -1,34 +1,76 @@
-.para {
-    color: white;
-    text-align: center;
-    font-family: 'Poiret One', cursive;
-    text-justify: inter-word;
-    line-height: 1.5em;
-}
 
-.center {
-    display: block;
-    margin: auto;
-}
-
-.fit {
-    max-width: 75%;
-    max-height: 75%;
-}
-
-.smoll {
-    max-width: 20%;
-    max-height: 20%;
-}
-
-.quote {
-    color: white;
-    text-align: center;
-    font-family: 'Poiret One', cursive;
-    font-size: 45px;
-}
-
-html {
-    scroll-behavior: smooth;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Candal', sans-serif;
+    cursor: url('cursor.png'), auto;
   }
   
+  .tablink {
+    background-color: rgb(126, 128, 255);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: url('hover.png'), auto;
+    padding: 20px 60px;
+    font-size: 17px;
+    display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  }
+  
+  .tablink:hover {
+    background-color: rgb(53, 61, 138);
+  }
+  
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+  
+  #Home {background-color: rgb(53, 61, 138);}
+  #About {background-color: rgb(53, 61, 138);}
+  #ReBrand {background-color: rgb(53, 61, 138);}
+  #Vision {background-color: rgb(53, 61, 138);}
+  #Discontinued {background-color: rgb(53, 61, 138);}
+
+ .flexli {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    height: auto;
+  }
+
+
+
+.fit {
+    flex: 20%;
+}
+
+#mydiv {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 60%;
+
+}
+
+.behind {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 60%;
+
+}
+
+.smoll{
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: 60%;
+  }
+
